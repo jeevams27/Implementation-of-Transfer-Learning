@@ -131,6 +131,35 @@ print(classification_report(y_test,x_test_predictions))
 
 ![image](./05.png)
 
+### Conclusion:
+
+* We got an Accuracy of 60% with this model.There could be several reasons for not achieving higher accuracy. Here are a few possible explanations:
+
+### Dataset compatibility:
+* VGG19 was originally designed and trained on the ImageNet dataset, which consists of high-resolution images.
+
+* In contrast, the CIFAR10 dataset contains low-resolution images (32x32 pixels).
+
+* The difference in image sizes and content can affect the transferability of the learned features.
+
+* Pretrained models like VGG19 might not be the most suitable choice for CIFAR10 due to this disparity in data characteristics.
+
+### Inadequate training data:
+* If the CIFAR10 dataset is relatively small, it may not provide enough diverse examples for the model to learn robust representations.
+
+* Deep learning models, such as VGG19, typically require large amounts of data to generalize well.
+
+* In such cases, you could consider exploring other architectures that are specifically designed for smaller datasets, or you might want to look into techniques like data augmentation or transfer learning from models pretrained on similar datasets.
+
+### Model capacity:
+* VGG19 is a deep and computationally expensive model with a large number of parameters.
+
+* If you are limited by computational resources or working with a smaller dataset, the model's capacity might be excessive for the task at hand.
+
+* In such cases, using a smaller model architecture or exploring other lightweight architectures like MobileNet or SqueezeNet could be more suitable and provide better accuracy.
+
+
+
 ***RESULT:***
 
 Thus, transfer Learning for CIFAR-10 dataset classification using VGG-19 architecture is successfully implemented.
